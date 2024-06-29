@@ -202,7 +202,7 @@ async function processMessage(message, mainDiv, pinnedDiv) {
   }
 }
 
-async function showChat(chatId, token) {
+async function showChat(chatId) {
   var contentDiv = document.getElementById("content");
   var mainDiv = document.createElement("div");
   mainDiv.id = "mainChat";
@@ -226,7 +226,6 @@ async function showChat(chatId, token) {
   });
 
   socket.send(JSON.stringify({
-    oauthToken: token,
     chatId: chatId,
   }));
 }
