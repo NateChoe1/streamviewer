@@ -1,12 +1,14 @@
-@%/site/head.html@
-@=header The official, legally binding streamviewer TOS and privacy policy@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The official streamviewer TOS and privacy policy</h1>
 
 <h2>Preamble</h2>
 
-<p>Google wants me to write a terms of service and privacy policy for this
-service, so here it is. I've put them both into one document so that you only
-have to read one thing, because forcing users to read two documents is
-bullshit.</p>
+<p>Many sites separate their TOS and privacy policy into two separate documents
+that you have to slog through individually. I don't like that, so I've combined
+them both into a single web page.</p>
 
 <h2>Begin TOS and privacy policy</h2>
 
@@ -15,15 +17,12 @@ bullshit.</p>
 <p>Most legal documents start with a series of definitions, so I guess I'll do
 that too.</p>
 
-<p>In this document, "I" and "me" refers to Nate Choe, the webmaster of
+<p>In this document, "I", "we", and "me" refers to Nate Choe, the webmaster of
 https://natechoe.dev as of the year 2024, and the original creator of the
 streamviewer tool.</p>
 
 <p>"You" and "the user" refers to you, a person who authorizes their Google
 account to the streamviewer program.</p>
-
-<p>"Bullshit" refers to hogwash, idiocy, and other such tomfoolery with a
-negative impact on society.</p>
 
 <p>"This service", "the service", "this program", "the program", and similar
 derivations refer to the streamviewer program.</p>
@@ -32,73 +31,50 @@ derivations refer to the streamviewer program.</p>
 
 <p>"Youtube" refers to the video and livestreaming service created by Google.</p>
 
-<h2>Part 2: The policy</h2>
+<p>"Cloudflare" refers to Cloudflare Inc. and their many products, including
+Cloudflare Workers and Cloudflare Pages.</p>
 
-<p>I'm not an evil person, I don't want your data. Please don't send it to
-me.</p>
+<h2>Part 2: The TOS and privacy policy</h2>
 
-<p>When you visit this (or any) website, you give me (or the website owner) your
-IP address. This information may be used to get some information about your
-location, such as the city that you're visiting from. Your IP address may be
-logged in some places, although I will never share your IP address or give it to
-someone else unless I either get hacked or am required to do so by United States
-law.</p>
+<p>This page is hosted with Cloudflare pages, and the backend is hosted with
+Cloudflare workers. Cloudflare may collect certain information about your
+browser, including your IP address, user agent, and other browser metadata. I am
+not liable for the data that Cloudflare collects. Cloudflare's privacy policy
+can be viewed at <a
+href=https://www.cloudflare.com/privacypolicy/>https://www.cloudflare.com/privacypolicy/</a>.</p>
 
-<p>By the way, I have been hacked before. I documented the entire thing, you can
-read all about it at <a
-href=https://natechoe.dev/blog/2024-03-07.html>https://natechoe.dev/blog/2024-03-07.html</a>.
-I've made my entire website a lot more secure since that incident, but I'm just
-letting you know that it has happened before, and that it could happen
-again. If it does happen again, please don't sue me.</p>
+<p>Youtube wants me to add a link to their terms of service, so here it is: <a
+href=https://www.youtube.com/t/terms>https://www.youtube.com/t/terms</a></p>
 
-<p>Google hires thousands of the smartest software engineers on the planet.
-Despite this, it remains impossible to view a Youtube stream chat outside of the
-official website without logging into a Google account. This is bullshit. For
-this reason, we require you to log in to your Google account and give certain
-permissions to the streamviewer service to use this program. These permissions
-are only used on your computer, and are never sent to me. Even if they were,
-though, I (or anybody, really) would only be able to view information about your
-Youtube account. I would not be able to upload or delete videos, and I wouldn't
-be able to view anything about any other Google services you use.</p>
+<p>This service utilizes the Youtube APIs, which are subject to Google's privacy
+policy, located at <a
+href=https://www.google.com/policies/privacy>https://www.google.com/policies/privacy</a>.</p>
 
-<p>Cookies are small text strings stored on your local browser. Cookies are
-bullshit, and we don't use them. Google does, though, but you already agreed to
-that when you made your Google account.</p>
+<p>Despite the fact that Youtube and Google hire thousands of the smartest
+engineers on the planet, it's not possible, or at least very difficult, to write
+a program to view a Youtube live chat without logging in to a Google account.
+When you log in to a Google account, Google generates an "oauth2 token", which
+programs can use to access certain Google services. For some reason, you need an
+oauth2 token to get a stream chat ID. This requires you to log in to the
+streamviewer service. The oauth2 token never leaves your computer, and is never
+stored on your computer.</p>
 
-<p>With the way that this program is written, I don't know if I'm able to figure
-out which Google accounts are using it. I might be able to, but I'm too lazy to
-figure out how.</p>
+<p>This also means that I can't revoke the oauth2 token that was generated,
+since I never get it in the first place. This is a problem, as Youtube requires
+that I provide a way to revoke oauth2 tokens. Oauth2 tokens can be revoked
+through the Google security settings page at <a
+href=https://security.google.com/settings/security/permissions>https://security.google.com/settings/security/permissions</a>.
+This is the official way to revoke tokens, because I literally cannot do
+anything on my end.</p>
 
-<p>Feel free to do whatever the hell you want with this code. You can share it,
-you can change it, you can even sell it. The only conditions are that you credit
-me, and that you use this exact TOS and privacy policy, including the preamble
-and appendix, in the exact same wording. If you do redistribute this code, you
-must provide a copy of the original code and any changes you've made in the
-original forms that they were developed in (so no minification or precompiled
-binaries). You must also clearly distinguish your changes from my code.</p>
+<p>You can contact the developer at <a
+href=mailto:nate@natechoe.dev>nate@natechoe.dev</a>.</p>
 
-<p>Streamviewer is copyright of Nate Choe, 2024. It is not public domain
-software.</p>
-
-<h2>Part 3: The stuff Google wants me to add</h2>
-
-<p>Google wants me to tell you that streamviewer uses Youtube API services to do
-its job.</p>
-
-<p>They also want me to tell you about the <a
-href=http://www.google.com/policies/privacy,>Google privacy policy</a>, which
-applies to services which use Youtube API services. You should actually read
-that document, it is a legally binding contract between you and Google.</p>
-
-<p>We use the Youtube API to find your livestreams and to show your chat
-messages. This data is entirely stored locally, I never see it, and I never
-sell/share it with anybody.</p>
-
-<p>I don't do anything evil, but if you don't trust me, you can remove my access
-at <a
-href=https://security.google.com/settings/security/permissions>https://security.google.com/settings/security/permissions</a>.</p>
-
-<p>You can email me at <a href=mailto:nate@natechoe.dev>nate@natechoe.dev</a>.</p>
+<p>You are allowed to exploit/hack/break streamviewer, under the conditions that
+you don't collect any user data, that you don't cause unnecessary damage beyond
+proving that streamviewer is exploitable, and that you responsibly disclose any
+vulnerabilities you find to <a
+href=mailto:nate@natechoe.dev>nate@natechoe.dev</a>.</p>
 
 <h2>End TOS and privacy policy</h2>
 
@@ -107,4 +83,5 @@ href=https://security.google.com/settings/security/permissions>https://security.
 <p>It's probably pretty obvious by now, but I'm not a lawyer. Just don't break
 the law while using this software and you're probably fine.</p>
 
-@%/site/tail.html@
+</body>
+</html>
