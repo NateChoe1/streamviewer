@@ -231,6 +231,7 @@ async function showChat(chatId) {
 }
 
 async function runViewer(token) {
+  window.history.replaceState("null", "", "/");
   var broadcastList = await sendRequest("GET", "https://www.googleapis.com/youtube/v3/liveBroadcasts", {
     part: "snippet",
     mine: true,
